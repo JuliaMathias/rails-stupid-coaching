@@ -1,0 +1,27 @@
+<div class="card mb-5">
+  <div class="card-body">
+    <blockquote class="blockquote">
+        <p class="mb-0">
+          <% if @question.blank? %>
+            😶
+          <% else %>
+            <%= @question %>
+          <% end %>
+        </p>
+        <footer class="blockquote-footer"><cite>You</cite></footer>
+      </blockquote>
+  </div>
+</div>
+<div class="card mb-5">
+  <div class="card-body">
+    <blockquote class="blockquote">
+        <p class="mb-0"><%= @answer %></p>
+        <footer class="blockquote-footer"><cite>Coach</cite></footer>
+      </blockquote>
+  </div>
+</div>
+
+
+
+
+<%= link_to "Ask another question", ask_path %>
